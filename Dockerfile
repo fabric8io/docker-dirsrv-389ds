@@ -10,9 +10,6 @@ COPY confd /etc/confd
 
 COPY scripts/install-and-run-389ds.sh /install-and-run-389ds.sh
 
-COPY centos.repo /tmp
-
-# rm -rf /etc/yum.repos.d/* && cp /tmp/centos.repo /etc/yum.repos.d/  && \
 RUN  yum -y install curl hostname httpd authconfig nss-tools && \
      yum -y install java-1.8.0-openjdk-headless  openssl procps-pg coreutils && \
      yum -y install 389-ds-base.x86_64 openldap-clients && \ 
