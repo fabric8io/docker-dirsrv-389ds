@@ -1,0 +1,10 @@
+[template]
+src  = "389ds-setup.inf.tmpl"
+dest = "/389ds-setup.inf"
+keys = [
+   "/dirsrv/hostname",
+   "/dirsrv/admin/username",
+   "/dirsrv/admin/password",
+   "/dirsrv/suffix",
+   "/dirsrv/manager/password",   
+]

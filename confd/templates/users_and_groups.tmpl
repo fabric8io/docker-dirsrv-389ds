@@ -1,0 +1,185 @@
+version: 1
+
+dn: cn=ClusterAdmins,ou=Groups,{{getv "/dirsrv/suffix"}}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: ClusterAdmins
+description: The group of cluster adminstrators
+uniqueMember: uid=admin,ou=People,{{getv "/dirsrv/suffix"}}
+
+dn: cn=Managers,ou=Groups,{{getv "/dirsrv/suffix"}}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: Managers
+description: The group of Managers
+uniqueMember: uid=julia,ou=People,{{getv "/dirsrv/suffix"}}
+uniqueMember: uid=james,ou=People,{{getv "/dirsrv/suffix"}}
+
+dn: cn=Developers,ou=Groups,{{getv "/dirsrv/suffix"}}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: Developers
+description: The group of developers
+uniqueMember: uid=martin,ou=People,{{getv "/dirsrv/suffix"}}
+uniqueMember: uid=lotti,ou=People,{{getv "/dirsrv/suffix"}}
+uniqueMember: uid=david,ou=People,{{getv "/dirsrv/suffix"}}
+
+dn: cn=Business,ou=Groups,{{getv "/dirsrv/suffix"}}
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: Business
+description: The Business Users
+uniqueMember: uid=raja,ou=People,{{getv "/dirsrv/suffix"}}
+
+dn: uid=david,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: David
+sn: Berger
+uid: david
+givenName: David Berger
+mail: david.berger@example.com
+member: cn=Developers,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001103
+ou: People
+userPassword: password
+
+dn: uid=lotti,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: Lotti
+sn: Stein
+uid: lotti
+givenName: Lotti Stein
+mail: lotti.stein@example.com
+member: cn=consumers,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001106
+ou: People
+userPassword: password
+
+dn: uid=rolf,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: Rolf
+sn: Hess
+uid: rolf
+givenName: Rolf Hess
+mail: rolf.hess@example.com
+member: cn=business,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001109
+ou: People
+userPassword: password
+
+dn: uid=julia,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: Julia
+sn: Maurer
+uid: julia
+givenName: Julia Maurer
+mail: julia.maurer@example.com
+member: cn=Managers,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001100
+ou: People
+userPassword: password
+
+dn: uid=martin,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: Martin
+sn: Gall
+uid: martin
+givenName: Martin Gall
+mail: martin.gall@example.com
+member: cn=consumers,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001107
+ou: People
+userPassword: password
+
+dn: uid=james,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: James
+sn: Masse
+uid: james
+givenName: James Masse
+mail: james@example.com
+member: cn=Managers,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001104
+ou: People
+userPassword: password
+
+dn: uid=raja,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: Raja
+sn: Fauchs
+uid: raja
+givenName: Raja Fauchs
+mail: raja.fauchs@example.com
+member: cn=business,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001108
+ou: People
+userPassword: password
+
+dn: uid=john,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: John
+sn: Stucki
+uid: john
+givenName: John Stucki
+mail: john.stucki@example.com
+member: cn=Business,ou=Groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001105
+ou: People
+userPassword: password
+
+dn: uid=admin,ou=People,{{getv "/dirsrv/suffix"}}
+objectClass: organizationalPerson
+objectClass: person
+objectClass: extensibleObject
+objectClass: uidObject
+objectClass: inetOrgPerson
+objectClass: top
+cn: OpenShift
+sn: Admin
+uid: admin
+givenName: Cluster Admin
+mail: admin@example.com
+member: cn=ClusterAdmins,ou=groups,{{getv "/dirsrv/suffix"}}
+mobile: 9900001101
+ou: People
+userPassword: password

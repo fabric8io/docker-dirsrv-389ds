@@ -1,0 +1,10 @@
+[template]
+src  = "users_and_groups.tmpl"
+dest = "/tmp/users_and_groups.ldif"
+keys = [
+   "/dirsrv/hostname",
+   "/dirsrv/admin/username",
+   "/dirsrv/admin/password",
+   "/dirsrv/suffix",
+   "/dirsrv/manager/password",   
+]
