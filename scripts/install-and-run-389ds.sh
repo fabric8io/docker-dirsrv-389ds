@@ -5,7 +5,7 @@ export DIRSRV_HOSTNAME=${DIRSRV_HOSTNAME:-$(hostname --fqdn)}
 export DIRSRV_ADMIN_USERNAME=${DIRSRV_ADMIN_USERNAME:-"admin"}
 export DIRSRV_ADMIN_PASSWORD=${DIRSRV_ADMIN_PASSWORD:-${DIRSRV_MANAGER_PASSWORD:-"admin@123"}}
 export DIRSRV_MANAGER_PASSWORD=${DIRSRV_MANAGER_PASSWORD:-${DIRSRV_ADMIN_PASSWORD:-"admin@123"}}
-export DIRSRV_SUFFIX=${DIR_SUFFIX:-"dc=example,dc=com"}
+export DIRSRV_SUFFIX=${DIRSRV_SUFFIX:-"dc=example,dc=com"}
 
 BASEDIR="/etc/dirsrv/slapd-dir"
 ROOT_DN="cn=Directory Manager"
